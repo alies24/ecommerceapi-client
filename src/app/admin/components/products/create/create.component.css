@@ -1,0 +1,13 @@
+.create-form {
+  min-width: 150px;
+  max-width: 250px;
+  width: 100%;
+}
+
+.create-full-width {
+  width: 100%;
+}
+.create-button{
+  margin-top: 10px;
+
+}

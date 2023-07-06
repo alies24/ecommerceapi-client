@@ -1,0 +1,19 @@
+<form class="create-form">
+  <mat-form-field class="create-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput #txtName>
+  </mat-form-field>
+  <mat-form-field class="create-full-width">
+    <mat-label >Units in stock</mat-label>
+    <input matInput type="number" min="0" value="0" #txtStock>
+  </mat-form-field>
+  <mat-form-field class="create-full-width">
+    <mat-label>Unit price</mat-label>
+    <input matInput type="number" min="0" value="0" #txtUnitPrice>
+  </mat-form-field>
+  <mat-form-field class="create-full-width">
+    <mat-label>Description</mat-label>
+    <input matInput #txtDescription>
+  </mat-form-field>
+</form>
+<button class="create-button" mat-raised-button color="primary" (click)="create(txtDescription, txtName, txtStock, txtUnitPrice)">Create!</button>

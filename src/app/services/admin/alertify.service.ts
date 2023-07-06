@@ -11,7 +11,7 @@ export class AlertifyService {
   message(message:string, alertifyOptions:Partial<AlertifyOptions> ){
     alertify.set('notifier','position', alertifyOptions.positionType);
     alertify.set('notifier','delay', alertifyOptions.delay);
-    alertify[alertifyOptions.messageType = AlertifyMessageType.Message](message);
+    alertify[alertifyOptions.messageType? alertifyOptions.messageType : ""](message);
 
 
   }

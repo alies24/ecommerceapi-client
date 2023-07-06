@@ -12,14 +12,16 @@ declare var alertify:any;
 })
 export class AppComponent {
   title = 'E-Commerce Client';
-  constructor(private spinner: NgxSpinnerService){}
+  constructor(){}
 
   ngOnInit(): void {
+    
   }
 
 
+  
+}
 
-  }
 
 
 
