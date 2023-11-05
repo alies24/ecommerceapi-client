@@ -12,12 +12,14 @@ import { BaseComponent } from './base/base.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './admin/admin.module';
 import { DeleteDirective } from './directives/admin/delete.directive';
+import { FileUploadDialogComponent } from './dialogs/file-upload-dialog/file-upload-dialog.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FileUploadDialogComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -29,7 +31,7 @@ import { DeleteDirective } from './directives/admin/delete.directive';
     HttpClientModule,
   ],
   providers: [
-    {provide:"baseUrl", useValue: "https://localhost:7003/api", multi:true}
+    {provide:"baseUrl", useValue: "https://localhost:44381/api", multi:true}
   ],
   bootstrap: [AppComponent]
 })

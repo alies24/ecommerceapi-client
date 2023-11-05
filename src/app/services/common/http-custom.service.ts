@@ -63,5 +63,6 @@ export class RequestParameters{
   headers?: HttpHeaders;
   baseUrl?: string;
   fullEndPoint?: string;
+  queryString?:string;
 
 }

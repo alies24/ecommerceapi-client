@@ -6,6 +6,7 @@ import { HttpCustomService } from 'src/app/services/common/http-custom.service';
 import { SpinnerType } from 'src/app/base/base.component';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteDialogComponent, DeleteState } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
+import { HttpErrorResponse } from '@angular/common/http';
 
 declare var $:any;
 @Directive({
@@ -38,6 +39,12 @@ export class DeleteDirective {
         this.alertifyService.message("Success!", {
           positionType: AlertifyPossesionType.TopCenter,
           messageType:AlertifyMessageType.Success
+        })
+      }, (errorResponse:HttpErrorResponse)=>{
+        this.ngxSpinner.hide(SpinnerType.LineScale);
+        this.alertifyService.message("ERROR!",{
+          messageType: AlertifyMessageType.Error,
+          positionType: AlertifyPossesionType.TopCenter
         })
       });
 
